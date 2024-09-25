@@ -26,19 +26,7 @@ You can install these using `pip`.
 git clone https://github.com/sathishkumarr012/Health-Check-Monitoring-Tool.git
 cd Health-Check-Monitoring-Tool
 ```
-## Install The Requred Python Packages
-- Run the following Command to install the necessary packages:
 
-```bash
-pip install -r requirements.txt
-```
-If you don’t have a `requirements.txt`, create one with the following contents:
-
-```text
-requests
-pyyaml
-responses
-```
 ### 3. Create the `config.yaml` file
 
 Create a `config.yaml` file with the following content:
@@ -72,6 +60,20 @@ This file defines the endpoints that the program will check.
 
 ---
 
+## Create a Virtual environment
+
+### On macOS or Linux:
+
+```bash
+python3  -m venv venv
+```
+
+### On Windows:
+
+```bash
+python  -m venv venv
+```
+
 ## Running the Program
 
 You can run the program by passing the path to your `config.yaml` file as an argument. The program will run in an infinite loop until manually stopped.
@@ -84,12 +86,6 @@ You can run the program by passing the path to your `config.yaml` file as an arg
    source venv/bin/activate
    ```
 
-2. Run the script:
-
-   ```bash
-   python health_check.py config.yaml
-   ```
-
 ### On Windows:
 
 1. Activate your virtual environment (if you’re using one):
@@ -98,7 +94,21 @@ You can run the program by passing the path to your `config.yaml` file as an arg
    .\venv\Scripts\activate
    ```
 
-2. Run the script:
+## Install The Required Python Packages
+- Run the following Command to install the necessary packages:
+
+```bash
+pip install -r requirements.txt
+```
+If you don’t have a `requirements.txt`, create one with the following contents:
+
+```text
+requests
+pyyaml
+responses
+```
+
+## Run the script:
 
    ```bash
    python health_check.py config.yaml
